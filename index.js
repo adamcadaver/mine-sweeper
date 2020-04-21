@@ -24,6 +24,6 @@ rl.on('line', function(line) {
         rl.close();
     }
     rl.prompt();
-}).on('close',function(){
+}).on('close',function() {
     process.exit(0);
 });

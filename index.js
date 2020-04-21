@@ -20,7 +20,7 @@ rl.on('line', function(line) {
         console.log('YOU WIN')
         rl.close();
     }
-    else if (bombFound){
+    else if (bombFound) {
         rl.close();
     }
     rl.prompt();

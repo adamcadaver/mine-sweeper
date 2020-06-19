@@ -4,15 +4,9 @@ on:
   repository_dispatch:
 
 jobs:
-  stale:
-
+  test:
+    name: Test
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/stale@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
-        stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
+      - uses: actions/checkout@v1
+      - run: 'echo "field: ${{ github.event.client_payload.unit }}"'

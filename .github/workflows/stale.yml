@@ -8,5 +8,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: 'echo "field: ${{ github.event.client_payload.unit }}"'
+      - uses: actions/checkout@v2
+      - name: my test
+        run: |
+          cd $GITHUB_WORKSPACE
+          ls
+          echo ${{ github.event.client_payload.institution }}

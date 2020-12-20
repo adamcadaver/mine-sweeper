@@ -18,3 +18,8 @@ jobs:
           on-failed-regex-comment:
             "This is just an example. Failed regex: `%regex%`!"
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+  danger:
+    runs-on: ubuntu-latest
+    name: Danger JS Action
+    steps:
+      - uses: danger/danger-js@9.1.8

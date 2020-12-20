@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const readline = require('readline');
 const { buildGraph, drawGraph, makeGuess } = require('./mine-sweeper') 
 const l = process.argv.length;
